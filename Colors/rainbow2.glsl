@@ -1,10 +1,10 @@
-float smoothstep( float x )
+float smoothstep1( float x )
 {
   return x*x*x/(3.0*x*x-3.0*x+1.0);
 }
 
 float SinLine(vec2 uv) {    
-        return smoothstep(0.02,0.0,abs(uv.x-uv.y));
+        return smoothstep1(uv.x);
 }
 
 void mainImage( out vec4 fragColor, in vec2 fragCoord )
